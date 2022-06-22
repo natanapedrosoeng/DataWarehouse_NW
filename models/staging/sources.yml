@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: northwind_kondado
+    schema: northwind_kondado
+    description: This is the Northwind erp postgres database replica.
+    tables:
+      - name: customers
+        description: This is the sales customer table. It includes informations about Northwind customers.
+        columns:
+          - name: customer_id
+            description: Natural key of the sales customer table.
