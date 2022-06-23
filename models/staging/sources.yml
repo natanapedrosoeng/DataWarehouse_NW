@@ -5,8 +5,165 @@ sources:
     schema: northwind_kondado
     description: This is the Northwind erp postgres database replica.
     tables:
+      - name: categories
+        description: This is the product category table.
+        columns:
+          - name: category_id
+            description: Natural key of the product category table.
+            tests:
+              - unique
+              - not_null
+
       - name: customers
-        description: This is the sales customer table. It includes informations about Northwind customers.
+        description: This is the customer table. It includes informations about Northwind customers.
         columns:
           - name: customer_id
-            description: Natural key of the sales customer table.
+            description: Natural key of the customer table.
+            tests:
+              - unique
+              - not_null
+
+      - name: employee_territories
+        description: This is the employee territories table.
+        columns:
+          - name: employee_id
+            description: Natural key of the employee table.
+            tests:
+              - not_null
+          - name: territory_id
+            description: Natural key of the territory table.
+            tests:
+              - not_null
+
+      - name: employees
+        description: This is the employee table.
+        columns:
+          - name: employee_id
+            description: Natural key of the employee table.
+            tests:
+              - unique            
+              - not_null
+
+      - name: order_details
+        description: This is the order details table.
+        columns:
+          - name: order_id
+            description: Natural key of the order table.
+            tests:          
+              - not_null
+          - name: product_id
+            description: Natural key of the product table.
+            tests:       
+              - not_null
+          - name: unit_price
+            description: This is the unit price product.
+            tests:       
+              - not_null
+          - name: quantity
+            description: This is the quantity of products.
+            tests:       
+              - not_null
+          - name: discount
+            description: This is the discount of products.
+            tests:       
+              - not_null
+
+      - name: orders
+        description: This is the order table.
+        columns:
+          - name: order_id
+            description: Natural key of the order table.
+            tests:
+              - unique          
+              - not_null
+          - name: customer_id
+            description: Natural key of the customer table.
+            tests:      
+              - not_null
+          - name: employee_id
+            description: Natural key of the employee table.
+            tests:      
+              - not_null
+          - name: order_date
+            description: This is the order date.
+            tests:      
+              - not_null
+          - name: ship_city
+            description: This is the city of orders.
+            tests:      
+              - not_null
+
+      - name: products
+        description: This is the product table.
+        columns:
+          - name: product_id
+            description: Natural key of the product table.
+            tests:
+              - unique          
+              - not_null
+          - name: product_name
+            description: This is the product name.
+            tests:        
+              - not_null
+          - name: supplier_id
+            description: Natural key of the supplier table.
+            tests:        
+              - not_null
+          - name: category_id
+            description: Natural key of the category table.
+            tests:        
+              - not_null
+
+      - name: region
+        description: This is the region table.
+        columns:
+          - name: region_id
+            description: Natural key of the region table.
+            tests:
+              - unique          
+              - not_null
+
+      - name: shippers
+        description: This is the shippers table.
+        columns:
+          - name: shipper_id
+            description: Natural key of the shippers table.
+            tests:
+              - unique          
+              - not_null
+          - name: company_name
+            description: This is the company name of shipper.
+            tests:  
+              - not_null
+
+      - name: suppliers
+        description: This is the suppliers table.
+        columns:
+          - name: supplier_id
+            description: Natural key of the supplier table.
+            tests:
+              - unique          
+              - not_null
+          - name: company_name
+            description: This is the company name of supplier.
+            tests:  
+              - not_null
+          - name: city
+            description: This is the city of supplier.
+          - name: region
+            description: This is the region of supplier.
+          - name: country
+            description: This is the country of supplier. 
+
+      - name: territories
+        description: This is the territory table.
+        columns:
+          - name: territory_id
+            description: Natural key of the territory table.
+            tests:
+              - unique          
+              - not_null
+          - name: region_id
+            description: Natural key of the region table.
+            tests:         
+              - not_null              
