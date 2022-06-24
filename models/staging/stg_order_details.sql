@@ -3,8 +3,8 @@ with
         select
             order_id
             , product_id
-            , unit_price
             , quantity
+            , unit_price
             , discount
         from {{source('northwind_kondado', 'order_details')}}
 )

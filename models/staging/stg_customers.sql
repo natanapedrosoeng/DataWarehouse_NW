@@ -3,13 +3,13 @@ with
         select
             customer_id
             , company_name
+            , city
+            , region
+            , country
             , contact_name
             , contact_title
             , address
-            , city
-            , region
             , postal_code
-            , country
             , phone
             , fax
         from {{source('northwind_kondado', 'customers')}}
