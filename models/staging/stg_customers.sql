@@ -2,6 +2,7 @@ with
     source_data as (
         select
             customer_id
+            , concat (city, country) as region_id
             , company_name
             , city
             , region
