@@ -191,4 +191,29 @@ sources:
           - name: country
             description: This is the country of supplier.
             tests:
-              - not_null  
+              - not_null
+
+      - name: seed_regions
+        description: This is an auxiliary table. This is the informations about city, region, country and division of countries by continents.
+        columns:
+          - name: id
+            description: This key references the city and country of each region to give data integrity, as sometimes the same name of a city appears in more than one country.
+            tests:
+              - unique
+              - not_null
+          - name: city
+            description: This is referring to city information.
+            tests:         
+              - not_null
+          - name: region
+            description: This is referring to region information.
+            tests:         
+              - not_null
+          - name: country
+            description: This is referring to country information.
+            tests:         
+              - not_null
+          - name: division
+            description: This is referring to division of countries by continents.
+            tests:         
+              - not_null

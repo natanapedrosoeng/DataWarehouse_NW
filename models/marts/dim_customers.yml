@@ -15,3 +15,19 @@ models:
         tests:
           - unique
           - not_null
+      - name: city
+        description: This is the customer's city.
+        tests:
+          - not_null
+      - name: region
+        description: This is the customers' country region. Some countries have states, other counties, districts or provinces.
+        tests:
+          - not_null
+      - name: country
+        description: This is the customer's country.
+        tests:
+          - not_null
+      - name: division
+        description: This is the division of countries by continents.
+        tests:
+          - not_null
