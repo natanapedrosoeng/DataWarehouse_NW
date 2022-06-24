@@ -2,6 +2,10 @@ with
     source_data as (
         select
             employee_id
+            , concat (first_name, ' ', last_name) as employee_name
+            , city
+            , region
+            , country            
             , last_name
             , first_name
             , title
@@ -9,10 +13,7 @@ with
             , birth_date
             , hire_date
             , address
-            , city
-            , region
             , postal_code
-            , country
             , home_phone
             , extension
             , photo

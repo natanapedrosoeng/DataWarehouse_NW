@@ -3,13 +3,13 @@ with
         select
             supplier_id
             , company_name
+            , city
+            , region
+            , country
             , contact_name
             , contact_title
             , address
-            , city
-            , region
             , postal_code
-            , country
             , phone
             , fax
             , homepage
