@@ -9,9 +9,44 @@ models:
         tests:
           - unique
           - not_null
-
       - name: product_id
         description: The primary key of the product table.
         tests:
           - unique
+          - not_null
+      - name: product_name
+        description: This is the name of the products.
+        tests:
+          - not_null
+      - name: company_name
+        description: This is the company name of the product suppliers.
+        tests:
+          - not_null
+      - name: category_name
+        description: This is the product categories name.
+        tests:
+          - not_null
+      - name: unit_price
+        description: This is the unit price of products.
+        tests:
+          - not_null
+      - name: city
+        description: This is the information about the country of product origin.
+        tests:
+          - not_null
+      - name: region
+        description: This is the information about the region of product origin.
+        tests:
+          - not_null
+      - name: country
+        description: This is the information about the country of product origin.
+        tests:
+          - not_null
+      - name: division
+        description: This is the information about the division of product origin.
+        tests:
+          - not_null
+      - name: is_discontinued
+        description: This is the information about discontinued products.
+        tests:
           - not_null
