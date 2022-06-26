@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_employees
+    description: This is the employee dimension table. It includes informations about Northwind employees.
+    columns:
+      - name: employee_sk
+        description: The primary key of the employee dimension table generated with row_number.
+        tests:
+          - unique
+          - not_null
+      - name: employee_id
+        description: The natural key of the employee table.
+        tests:
+          - unique
+          - not_null
+      - name: employee_name
+        description: The employee's name.
+        tests:
+          - not_null
+      - name: city
+        description: This is the information about the employee's city.
+        tests:
+          - not_null
+      - name: region
+        description: This is the information about the employee's region.
+        tests:
+          - not_null
+      - name: country
+        description: This is the information about the employee's country.
+        tests:
+          - not_null
+      - name: division
+        description: This is the information about the employee's division.
+        tests:
+          - not_null

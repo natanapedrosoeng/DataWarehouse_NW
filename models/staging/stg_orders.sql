@@ -5,6 +5,7 @@ with
             , customer_id
             , employee_id
             , ship_via as shipper_id
+            , concat (ship_city, ship_country) as region_id
             , cast (order_date as timestamp) as order_date
             , ship_city
             , ship_region

@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  - name: fact_order_details
+    description: This is the order detail fact table. It includes informations about Northwind order.
+    columns:
+      - name: order_id
+        description: The primary key of the order table.
+        tests:
+          - not_null
+      - name: product_fk
+        description: The foreing key of the product dimension table.
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_sk
+          - not_null
+      - name: customer_fk
+        description: The foreing key of the customer dimension table.
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_sk
+          - not_null
+      - name: employee_fk
+        description: The foreing key of the employee dimension table.
+        tests:
+          - relationships:
+              to: ref('dim_employees')
+              field: employee_sk
+          - not_null
+      - name: shipper_fk
+        description: The foreing key of the shipper dimension table.
+        tests:
+          - relationships:
+              to: ref('dim_shippers')
+              field: shipper_sk
+          - not_null
+      - name: order_date
+        description: This is the order date.
+        tests:
+          - not_null
+      - name: quantity
+        description: This is the quantity of each product per order.
+        tests:
+          - not_null
+      - name: unit_price
+        description: This is the unit price of the product.
+        tests:
+          - not_null
+      - name: discount
+        description: This is the discount on the unit price of the product.
+        tests:
+          - not_null
+      - name: ship_city
+        description: This is information about the city of origin order.
+        tests:
+          - not_null
+      - name: ship_region
+        description: This is information about the region of origin order.
+        tests:
+          - not_null
+      - name: ship_country
+        description: This is information about the country of origin order.
+        tests:
+          - not_null
+      - name: ship_division
+        description: This is information about the division of origin order.
+        tests:
+          - not_null
