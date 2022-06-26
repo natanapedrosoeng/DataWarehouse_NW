@@ -2,10 +2,11 @@ with
     source_data as (
         select
             employee_id
+            , concat (city, country) as region_id
             , concat (first_name, ' ', last_name) as employee_name
             , city
             , region
-            , country            
+            , country           
             , last_name
             , first_name
             , title

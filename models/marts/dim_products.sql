@@ -64,6 +64,6 @@ with
             , division
             , is_discontinued
         from transformations
-    )
+)
 select *
 from products

@@ -1,6 +1,6 @@
 with
     source_data as (
-        select *            
+        select *          
         from {{source('northwind_kondado', 'seed_regions')}}
 )
 select *

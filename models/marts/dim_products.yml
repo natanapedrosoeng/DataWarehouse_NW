@@ -5,12 +5,12 @@ models:
     description: This is the product dimension table. It includes informations about Northwind products.
     columns:
       - name: product_sk
-        description: The surrogate key of the product dimension table generated with row_number.
+        description: The primary key of the product dimension table generated with row_number.
         tests:
           - unique
           - not_null
       - name: product_id
-        description: The primary key of the product table.
+        description: The natural key of the product table.
         tests:
           - unique
           - not_null
@@ -31,22 +31,22 @@ models:
         tests:
           - not_null
       - name: city
-        description: This is the information about the country of product origin.
+        description: This is information about the city of origin product.
         tests:
           - not_null
       - name: region
-        description: This is the information about the region of product origin.
+        description: This is information about the region of origin product.
         tests:
           - not_null
       - name: country
-        description: This is the information about the country of product origin.
+        description: This is information about the country of origin product.
         tests:
           - not_null
       - name: division
-        description: This is the information about the division of product origin.
+        description: This is information about the division of origin product.
         tests:
           - not_null
       - name: is_discontinued
-        description: This is the information about discontinued products.
+        description: If the product has been discontinued.
         tests:
           - not_null

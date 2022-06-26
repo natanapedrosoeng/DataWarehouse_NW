@@ -14,10 +14,11 @@ sources:
               - unique
               - not_null
           - name: category_name
-            description: Primary key of the product category table.
+            description: This is the name of product category.
             tests:
               - not_null
-
+          - name: description
+            description: This is the category discription.
       - name: customers
         description: This is the customer table. It includes informations about Northwind customers.
         columns:
@@ -27,18 +28,18 @@ sources:
               - unique
               - not_null
           - name: company_name
-            description: This is the company's name.
+            description: This is the company name.
             tests:
               - unique
               - not_null
           - name: city
-            description: This is the city of customers.
+            description: This is the city of the customers.
             tests:
               - not_null   
           - name: region
-            description: This is the region of customers.
+            description: This is the region of the customers.
           - name: country
-            description: This is the country of customers.
+            description: This is the country of the customers.
             tests:
               - not_null  
 
@@ -59,13 +60,13 @@ sources:
             tests:          
               - not_null
           - name: city
-            description: This is the city of employees.
+            description: This is the city of the employees.
             tests:
               - not_null   
           - name: region
-            description: This is the region of employees.
+            description: This is the region of the employees.
           - name: country
-            description: This is the country of employees.
+            description: This is the country of the employees.
             tests:
               - not_null  
 
@@ -73,11 +74,11 @@ sources:
         description: This is the order details table.
         columns:
           - name: order_id
-            description: Foreing key of the order table.
+            description: Primary key of the order table.
             tests:          
               - not_null
           - name: product_id
-            description: Foreing key of the product table.
+            description: Primary key of the product table.
             tests:       
               - not_null
           - name: quantity
@@ -85,11 +86,11 @@ sources:
             tests:       
               - not_null
           - name: unit_price
-            description: This is the unit price product.
+            description: This is the unit price of the products.
             tests:       
               - not_null
           - name: discount
-            description: This is the discount of products.
+            description: This is the discount of the products.
             tests:       
               - not_null
 
@@ -102,15 +103,15 @@ sources:
               - unique          
               - not_null
           - name: customer_id
-            description: Foreing key of the customer table.
+            description: Primary key of the customer table.
             tests:      
               - not_null
           - name: employee_id
-            description: Foreing key of the employee table.
+            description: Primary key of the employee table.
             tests:      
               - not_null
           - name: ship_via
-            description: Foreing key of the shippers table.
+            description: Primary key of the shippers table.
             tests:      
               - not_null
           - name: order_date
@@ -118,13 +119,13 @@ sources:
             tests:      
               - not_null
           - name: ship_city
-            description: This is the city of orders.
+            description: This is the city of the orders.
             tests:      
               - not_null
           - name: ship_region
-            description: This is the region of orders.
+            description: This is the region of the orders.
           - name: ship_country
-            description: This is the country of orders.
+            description: This is the country of the orders.
             tests:
               - not_null  
 
@@ -137,11 +138,11 @@ sources:
               - unique          
               - not_null
           - name: supplier_id
-            description: Foreing key of the supplier table.
+            description: Primary key of the supplier table.
             tests:        
               - not_null
           - name: category_id
-            description: Foreing key of the category table.
+            description: Primary key of the category table.
             tests:        
               - not_null
           - name: product_name

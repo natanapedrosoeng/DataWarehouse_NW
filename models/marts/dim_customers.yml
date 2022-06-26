@@ -5,13 +5,13 @@ models:
     description: This is the customer dimension table. It includes informations about Northwind customers.
     columns:
       - name: customer_sk
-        description: The surrogate key of the customer dimension table generated with row_number.
+        description: The primary key of the customer dimension table generated with row_number.
         tests:
           - unique
           - not_null
 
       - name: customer_id
-        description: The primary key of the customer table.
+        description: The natural key of the customer table.
         tests:
           - unique
           - not_null
