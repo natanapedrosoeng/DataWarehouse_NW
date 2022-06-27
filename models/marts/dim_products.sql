@@ -6,6 +6,8 @@ with
             , category_id
             , product_name
             , unit_price
+            , units_in_stock
+            , reorder_level
             , is_discontinued
         from {{ref('stg_products')}}
     )
@@ -38,6 +40,8 @@ with
             selected_products.product_id
             , selected_products.product_name
             , selected_products.unit_price
+            , selected_products.units_in_stock
+            , selected_products.reorder_level
             , selected_products.is_discontinued
             , selected_categories.category_name
             , selected_suppliers.company_name
@@ -58,6 +62,8 @@ with
             , company_name
             , category_name
             , unit_price
+            , units_in_stock
+            , reorder_level
             , city
             , region
             , country

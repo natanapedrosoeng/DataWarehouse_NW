@@ -40,6 +40,8 @@ models:
         description: This is the order date.
         tests:
           - not_null
+      - name: shipped_date
+        description: This is the order shipping date.
       - name: quantity
         description: This is the quantity of each product per order.
         tests:
@@ -68,3 +70,17 @@ models:
         description: This is information about the division of origin order.
         tests:
           - not_null
+      - name: freight
+        description: This is information about the freight of the orders.
+        tests:
+          - not_null
+      - name: ship_name
+        description: This is information about the shipper's name.
+        tests:
+          - not_null
+      - name: ship_address
+        description: This is information about the shipper's address.
+        tests:
+          - not_null
+      - name: ship_postal_code
+        description: This is information about the postal code of the orders.
