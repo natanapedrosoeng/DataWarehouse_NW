@@ -27,10 +27,15 @@ with
             , shippers.shipper_sk as shipper_fk
             , seed_regions.id as regions_fk
             , orders.order_date
+            , orders.shipped_date
             , orders.ship_city
             , seed_regions.region as ship_region
             , orders.ship_country
             , seed_regions.division as ship_division
+            , orders.freight
+            , orders.ship_name
+            , orders.ship_address
+            , orders.ship_postal_code
         from {{ref('stg_orders')}} as orders
         left join customers on orders.customer_id = customers.customer_id
         left join employees on orders.employee_id = employees.employee_id
@@ -55,6 +60,7 @@ with
             , orders_with_sk.employee_fk
             , orders_with_sk.shipper_fk
             , orders_with_sk.order_date
+            , orders_with_sk.shipped_date
             , order_details_with_sk.quantity
             , order_details_with_sk.unit_price
             , order_details_with_sk.discount           
@@ -62,6 +68,10 @@ with
             , orders_with_sk.ship_region
             , orders_with_sk.ship_country
             , orders_with_sk.ship_division
+            , orders_with_sk.freight
+            , orders_with_sk.ship_name
+            , orders_with_sk.ship_address
+            , orders_with_sk.ship_postal_code
         from order_details_with_sk
         left join orders_with_sk on order_details_with_sk.order_id = orders_with_sk.order_id
 )
